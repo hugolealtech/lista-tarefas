@@ -1,0 +1,13 @@
+@for (tarefa of tarefas; track tarefa){
+
+    <!-- <li>{{tarefa.tarefa}}</li> -->
+    
+    <app-task-item [tarefa]="tarefa"(onDeleteTask)="deleteTask($event)"></app-task-item>
+}
+@empty {
+    <p>Não há tarefas</p>
+}
+
+
+
+
